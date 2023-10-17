@@ -26,3 +26,4 @@ navLis.forEach(e=>{
   })
 
 })
+console.log("running")
