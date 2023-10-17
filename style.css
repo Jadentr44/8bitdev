@@ -1,0 +1,55 @@
+/* Hide scrollbar for Chrome, Safari and Opera */
+body::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+body {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+
+.retro {
+  font-family: 'Press Start 2P', sans-serif;
+
+}
+
+.navUL{
+  font-family: 'Press Start 2P','lato', sans-serif;
+}
+p{
+  font-family: 'lato', sans-serif;
+
+}
+
+.mainBtn{
+
+  font-weight: bold;
+   padding:  .5rem 1.25rem;
+   outline: 3px black solid;
+  background-color: #EF4444 ;
+  color: white;
+}
+.mainBtn:hover{
+  background-color: #DC2626;
+}
+.rotate {
+  background-color: #EF4444;
+  transform: translate(0%, 0%) rotate(90deg);
+  transform-origin: right center;
+}
+
+@keyframes fadeInUp {
+  from {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+.fade-in-up {
+  animation: 1.75s both fadeInUp;
+}

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Document</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato&family=Press+Start+2P&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body id="body" class="mx-[5%] overflow-x-hidden bg-[#E9DAC4]">
+    <nav
+      style="z-index: 50"
+      class="flex justify-between items-center fixed left-0 right-0 top-0 py-4 px-[5%] bg-[#E9DAC4]"
+    >
+      <div class="    ">
+        <a href="">
+          <img src="/img/logo.png" alt="retro computer" class="w-16" />
+        </a>
+      </div>
+      <div class="hidden lg:block">
+        <ul class="flex items-center navUL h-full text-lg gap-8">
+         <a href=""><li class=" cursor-pointer flex items-center link"><img class="h-8 invisible" src="https://static.thenounproject.com/png/801787-200.png" alt=""> Home</li></a> 
+         <a href=""><li class=" cursor-pointer flex items-center link"><img class="h-8 invisible" src="https://static.thenounproject.com/png/801787-200.png" alt=""> Projects</li></a> 
+         <li class=" cursor-not-allowed flex items-center link"><img class="h-8 invisible" src="https://static.thenounproject.com/png/801787-200.png" alt=""> Blog</li>
+         <a href=""><li class=" cursor-pointer flex items-center link"><img class="h-8 invisible" src="https://static.thenounproject.com/png/801787-200.png" alt=""> Contact</li></a> 
+          
+          
+          
+        </ul>
+      </div>
+    </nav>
+    <section class="min-h-fit h-fit">
+      <div
+        class="lg:flex min-h-screen mt-20 lg:mt-0 items-center justify-evenly flex-col lg:flex-row-reverse"
+      >
+        <div class="w-4/5  lg:w-fit mx-auto lg:mx-0">
+          <img
+            class="rounded-full mx-auto w-full lg:w-fit"
+            src="/img/me.png"
+            alt=""
+          />
+        </div>
+        <div class="lg:max-w-[50%]">
+          <h1
+            class="retro text-2xl lg:text-6xl lg:mb-12 mb-8 flex flex-col lg:flex-row items-center fade-in-up mt-5 lg:mt-0"
+          >
+           <span>
+
+            <span class="text-red-500">8</span>-Bit Dev</span>
+            <img class="h-16 ml-2" src="/img/nes.png" alt="" />
+          </h1>
+
+          <p class="lg:text-lg retro mb-8">
+            I'm a passionate web developer focused on crafting user-friendly and
+            innovative digital solutions.
+          </p>
+          <div class="flex flex-col lg:flex-row gap-4">
+            <a href=""
+              ><button class="mainBtn retro w-full link flex pr-8 items-center justify-center"><img class="w-6 invisible" src="https://static.thenounproject.com/png/801787-200.png" alt="">Learn More</button></a
+            >
+            <a href=""
+              ><button
+                class="mainBtn retro bg-[#E9DAC4] text-black hover:bg-[#dbcdb8] w-full link flex justify-center pr-8 items-center"><img class="w-6 invisible" src="https://static.thenounproject.com/png/801787-200.png" alt="">
+                Contact
+              </button></a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- about -->
+    <section
+      id="about"
+      class="flex w-full justify-evenly relative items-center lg:flex-row-reverse flex-col mt-8"
+    >
+      <!-- <div class="retro text-5xl absolute right-0  rotate px-4 pt-24 pb-8 rounded-b-lg border-black border border-4"><h2 class="text-white">About Me</h2></div> -->
+      <div class="max-w-[75rem]" >
+        <img class="lg:max-w-[40%] mx-auto " src="/img/pokemon.gif" alt="" />
+        <div class="flex lg:flex-row flex-col justify-around gap-4">
+
+          <div class="p-4 lg:max-w-[60%] border border-black border-4 mt-8 bg-white">
+            
+            <h3 class="text-center md:text-3xl text-xl retro mt-2 border-b border-b-4 border-black">Front End Dev</h3>
+            <p class="mt-2 md:text-sm text-xs font-semibold retro">
+              I'm a passionate web developer with expertise in both front-end and
+              back-end technologies, specializing in creating user-friendly,
+              performance-optimized websites. I'm dedicated to exceeding client
+              expectations through effective communication and innovative
+              problem-solving. My mission is to craft efficient, visually pleasing
+              web experiences, and I'm eager to tackle new challenges in this
+              dynamic field...
+            </p>
+          </div>
+          <div class="p-4 lg:max-w-[20%] border flex flex-col justify-center border-black border-4 mt-8 bg-white">
+            <h3 class="retro lg:text-2xl text-lg border-b border-b-4 border-black text-center">Hobbies:</h3>
+            <ul>
+              <li class="retro lg:text-lg  mt-4">-example</li>
+              <li class="retro lg:text-lg ">-example</li>
+              <li class="retro lg:text-lg ">-example</li>
+              <li class="retro lg:text-lg ">-example</li>
+              <li class="retro lg:text-lg ">-example</li>
+             
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class="h-screen"></div>
+    <script src="/script.js"></script>
+  </body>
+</html>
