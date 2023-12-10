@@ -5,51 +5,99 @@ body::-webkit-scrollbar {
 
 /* Hide scrollbar for IE, Edge and Firefox */
 body {
-  -ms-overflow-style: none;  /* IE and Edge */
-  scrollbar-width: none;  /* Firefox */
-}
-
-
-.retro {
-  font-family: 'Press Start 2P', sans-serif;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+  background-color: #f0f0f0;
 
 }
-
-.navUL{
-  font-family: 'Press Start 2P','lato', sans-serif;
-}
-p{
-  font-family: 'lato', sans-serif;
-
+html{
+  scroll-behavior: smooth;
 }
 
-.mainBtn{
+button {
+  border-radius: 0.5rem;
+  border: solid black 1px;
+  font-weight: 500;
 
-  font-weight: bold;
-   padding:  .5rem 1.25rem;
-   outline: 3px black solid;
-  background-color: #EF4444 ;
-  color: white;
 }
-.mainBtn:hover{
-  background-color: #DC2626;
-}
-.rotate {
+.btn:hover,.btn2{
   background-color: #EF4444;
-  transform: translate(0%, 0%) rotate(90deg);
-  transform-origin: right center;
+
+  color: white;
+  transition-delay: 0ms;
+
+}
+.btn, .btn2:hover{
+  border-color: #EF4444;
+  color: #EF4444;
+  background-color: white;
 }
 
-@keyframes fadeInUp {
-  from {
-    transform: translateY(50px);
-    opacity: 0;
+.projectCard {
+  transition: all .2s;
+  border-radius:  0 0 .5rem .5rem;
+  background-color: white;
+  overflow: hidden;
+  box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+}
+
+
+.cardContent {
+  visibility: hidden;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(0, 0, 0, 0.7);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.projectCard {
+  max-width: 30rem;
+  margin-inline: auto;
+}
+
+.hide {
+  opacity: 0;
+  transition: opacity  1s, transform 1s;
+  transform: translateX(-70%);
+
+}
+input, textarea{
+  width: 100%;
+  padding: .5rem;
+  border-radius: .5rem;
+  border: 1px solid black;
+  font-size: large;
+  margin-bottom: 1rem;
+}
+/* .highlight{
+  background-image: linear-gradient(#EF4444,#EF4444) ;
+  background-size: 100% 3px;
+  animation-delay: .5s;
+
+ background-position: bottom left;
+ background-repeat: no-repeat;
+} */
+
+
+@keyframes widthFull {
+  0% {
+     background-size: 0% 3px;
+
   }
-  to {
-    transform: translateY(0);
-    opacity: 1;
+  100% {
+    background-size: 100% 3px;
+
   }
 }
-.fade-in-up {
-  animation: 1.75s both fadeInUp;
+@media (min-width: 1024px) { 
+
+  .card1 {transition-delay:  .4s;z-index: 5;}
+  .card2 {transition-delay: .5s; z-index: 4;}
+  .card3 {transition-delay: .6s; z-index: 3;}
+  .card4 {transition-delay: .7s; z-index: 2;}
+}
+.show {
+  opacity: 1;
+  transform: translateX(0);
 }

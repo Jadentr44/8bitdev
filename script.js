@@ -1,29 +1,20 @@
-// JavaScript
-const elementsToFadeInUpOnScroll = document.querySelectorAll(".fade-in");
-if (elementsToFadeInUpOnScroll) {
-  window.addEventListener("scroll", function(event) {
-    elementsToFadeInUpOnScroll.forEach(function(element) {
-      if (window.scrollY >= (element.offsetTop - window.innerHeight)) {
-        element.classList.add("fade-in-up");
-      } else {
-        // element.classList.remove("fade-in-up");
-      }
-    });
-  });
-}
+const observer = new IntersectionObserver((Els) =>{
+  Els.forEach((el)=>{
 
-const navLis = document.querySelectorAll('.link')
-navLis.forEach(e=>{
-  e.addEventListener('mouseover', function(){
-
-    e.children[0].classList.add("visible")
-    e.children[0].classList.remove("invisible")
+    if(el.isIntersecting){
+      console.log("showing")
+      el.target.classList.add('show')
+    }
   })
-  e.addEventListener('mouseout', function(){
-
-    e.children[0].classList.remove("visible")
-    e.children[0].classList.add("invisible")
-  })
-
 })
+
+const hiddenEl = document.querySelectorAll('.hide')
+const highlight = document.querySelectorAll('.highlight')
+
+hiddenEl.forEach((el)=> observer.observe(el))
+// highlight.forEach((el,index)=> {
+//   console.log(el.offsetWidth)
+//   el.style.animation = `${el.offsetWidth*10}ms  widthFull`
+
+// })
 console.log("running")
