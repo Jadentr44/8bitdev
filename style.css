@@ -13,7 +13,9 @@ body {
 html{
   scroll-behavior: smooth;
 }
-
+nav li:hover{
+  color: #EF4444;
+}
 button {
   border-radius: 0.5rem;
   border: solid black 1px;
@@ -41,7 +43,18 @@ button {
   box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
 }
 
-
+.github{
+  width: 15%;
+  aspect-ratio: 1/1;
+  background-image: url(https://cdn-icons-png.flaticon.com/512/25/25231.png);
+background-size: contain;
+}
+.demo{
+  width: 15%;
+  aspect-ratio: 1/1;
+  background-image: url(https://cdn.iconscout.com/icon/free/png-256/free-desktop-windows-screen-monitor-display-30467.png);
+background-size: contain;
+}
 .cardContent {
   visibility: hidden;
   width: 100%;
