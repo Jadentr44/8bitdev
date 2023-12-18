@@ -19,7 +19,9 @@
   </head>
   <body>
     <nav style="z-index: 100" class="fixed top-0 left-0 right-0 bg-[#f0f0f0]">
-      <div class="max-w-7xl py-2 px-4 flex mx-auto items-center justify-between">
+      <div
+        class="max-w-7xl py-2 px-4 flex mx-auto items-center justify-between"
+      >
         <a href="#">
           <img class="h-12" src="img/logo.png " alt="" />
         </a>
@@ -67,74 +69,65 @@
     <section id="projects" class="max-w-7xl mx-auto py-12 px-4">
       <h2 class="text-4xl text-center font-semibold mb-12">Projects</h2>
       <div
-        class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 justify-around"
+        class="grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-3 gap-4 justify-around"
       >
-        <div order="2" class="projectCard w-full  card1">
-          <div class="h-[8rem] overflow-hidden">
-            <img class="" src="img/MyAniRank.png" alt="" />
+        <div class="projectCard w-full flex flex-col card2">
+          <div class="min-h-[8rem] h-[8rem] overflow-hidden">
+            <img class="" src="img/ironDev.png" alt="" />
           </div>
-          <div class="p-4">
-            <h3 class="text-xl font-semibold text-center">MyAniRank</h3>
-            <p class="text-gray-500">
-              Whether you're a seasoned fan or new to anime, MyAniRank provides
-              an intuitive experience to discover and track your favorite series
-              and movies.
+          <div class="p-4 flex flex-col h-full">
+            <h3 class="text-xl font-semibold text-center">IronDev</h3>
+            <p class="text-gray-500 h-full">
+              Your front-end coding hub for reading and writing about
+              development—a vibrant community sharing insights and expertise.
+              Join us to amplify your coding experience!
             </p>
             <div class="flex justify-around mt-4 font-semibold">
-              <div class="github"></div>
-              <div class="demo"></div>
+              <a
+                target="_blank"
+                class="github"
+                href="https://github.com/Jadentr44/irondev"
+              >
+              </a>
+              <a
+                target="_blank"
+                class="demo"
+                href="https://irondev.onrender.com/"
+              >
+              </a>
             </div>
           </div>
         </div>
-        <div order="2" class="projectCard w-full  card2">
-          <div class="h-[8rem] overflow-hidden">
+        <div class="projectCard w-full flex flex-col card2">
+          <div class="min-h-[8rem] h-[8rem] overflow-hidden">
             <img class="" src="img/MyAniRank.png" alt="" />
           </div>
-          <div class="p-4">
+          <div class="p-4 flex flex-col h-full">
             <h3 class="text-xl font-semibold text-center">MyAniRank</h3>
-            <p class="text-gray-500">
+            <p class="text-gray-500 h-full">
               Whether you're a seasoned fan or new to anime, MyAniRank provides
               an intuitive experience to discover and track your favorite series
               and movies.
             </p>
-            <div class="flex justify-around mt-4 font-semibold">
-              <div class="github"></div>
-              <div class="demo"></div>
-            </div>
+           
           </div>
         </div>
-        <div order="2" class="projectCard w-full  card3">
-          <div class="h-[8rem] overflow-hidden">
-            <img class="" src="img/MyAniRank.png" alt="" />
+        <div class="projectCard w-full flex flex-col card2">
+          <div class="min-h-[8rem] h-[8rem] overflow-hidden">
+            <img
+              class="object-center"
+              src="https://t4.ftcdn.net/jpg/00/65/87/55/360_F_65875517_gicOGvNvNORnx45GoASsh5jZNW54l3dI.jpg"
+              alt=""
+            />
           </div>
-          <div class="p-4">
-            <h3 class="text-xl font-semibold text-center">MyAniRank</h3>
-            <p class="text-gray-500">
-              Whether you're a seasoned fan or new to anime, MyAniRank provides
-              an intuitive experience to discover and track your favorite series
-              and movies.
+          <div class="p-4 flex flex-col h-full">
+            <h3 class="text-xl font-semibold text-center">Coming Soon</h3>
+            <p class="text-gray-500 h-full">
+              Exciting things are in the pipeline! Stay tuned for a showcase of
+              my latest \ projects, where innovation meets design, creating
+              seamless and engaging user experiences. Coming soon to elevate
+              your digital world!
             </p>
-            <div class="flex justify-around mt-4 font-semibold">
-              <div class="github"></div>
-              <div class="demo"></div>
-            </div>
-          </div>
-        </div>
-        <div order="2" class="projectCard w-full  card4">
-          <div class="h-[8rem] overflow-hidden">
-            <img class="" src="img/MyAniRank.png" alt="" />
-          </div>
-          <div class="p-4">
-            <h3 class="text-xl font-semibold text-center">MyAniRank</h3>
-            <p class="text-gray-500">
-              Whether you're a seasoned fan or new to anime, MyAniRank provides
-              an intuitive experience to discover and track your favorite series
-              and movies.
-            </p>
-            <div class="flex justify-around mt-4 font-semibold">
-              <div class="github"></div>
-              <div class="demo"></div>
-            </div>
           </div>
         </div>
       </div>
@@ -148,15 +141,26 @@
         </div>
         <div class="md:w-1/2 w-full">
           <h5>Subject</h5>
-          <input placeholder="Leave your subject here" class="p-2" type="text" />
+          <input
+            placeholder="Leave your subject here"
+            class="p-2"
+            type="text"
+          />
         </div>
-        
       </div>
       <h5>Message:</h5>
-      <textarea placeholder="Enter your message here" class=" p-2" rows="5"></textarea>
+      <textarea
+        placeholder="Enter your message here"
+        class="p-2"
+        rows="5"
+      ></textarea>
       <button class="btn2 py-1 px-2">Send message</button>
     </section>
-    <footer class=" bg-[#EF4444] py-4 px-2 mt-12 text-white md:text-lg text-center ">© 2023 Jaden Rodriguez Dev. All rights reserved.</footer>
+    <footer
+      class="bg-[#EF4444] py-4 px-2 mt-12 text-white md:text-lg text-center"
+    >
+      © 2023 Jaden Rodriguez Dev. All rights reserved.
+    </footer>
     <script src="/script.js"></script>
   </body>
 </html>
