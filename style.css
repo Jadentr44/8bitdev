@@ -92,7 +92,10 @@ input, textarea{
  background-repeat: no-repeat;
 } */
 
-
+.contactSvg{
+  width: 25%;
+  min-width: 20%;
+}
 @keyframes widthFull {
   0% {
      background-size: 0% 3px;
