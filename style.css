@@ -43,18 +43,7 @@ button {
   box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
 }
 
-.github{
-  width: 15%;
-  aspect-ratio: 1/1;
-  background-image: url(https://cdn-icons-png.flaticon.com/512/25/25231.png);
-background-size: contain;
-}
-.demo{
-  width: 15%;
-  aspect-ratio: 1/1;
-  background-image: url(https://cdn.iconscout.com/icon/free/png-256/free-desktop-windows-screen-monitor-display-30467.png);
-background-size: contain;
-}
+
 .cardContent {
   visibility: hidden;
   width: 100%;
@@ -117,3 +106,13 @@ input, textarea{
   opacity: 1;
   transform: translateX(0);
 }
+@media (hover: hover) {
+ .name li{
+  /* transition: all 150ms; */
+ }
+ .name li:hover{
+  transform: scale(1.25);
+	transform: translateY(0.25rem);
+ }
+}
+

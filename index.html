@@ -24,55 +24,87 @@
       >
         <a class="flex items-center gap-2" href="#">
           <img class="sm:h-12 h-10" src="img/logo.png " alt="" />
-          <ul class="flex sm:text-4xl text-3xl font-bold">
-            <li class="hover:scale-125 hover:translate-y-1 transition-all">J</li>
-            <li class="hover:scale-125 hover:translate-y-1 transition-all">a</li>
-            <li class="hover:scale-125 hover:translate-y-1 transition-all">d</li>
-            <li class="hover:scale-125 hover:translate-y-1 transition-all">e</li>
-            <li class="hover:scale-125 hover:translate-y-1 transition-all">n</li>
+          <ul class="flex sm:text-4xl name text-3xl font-bold">
+            <li class=" hover:translate-y-1 transition-all">
+              J
+            </li>
+            <li class=" hover:translate-y-1 transition-all">
+              a
+            </li>
+            <li class=" hover:translate-y-1 transition-all">
+              d
+            </li>
+            <li class=" hover:translate-y-1 transition-all">
+              e
+            </li>
+            <li class=" hover:translate-y-1 transition-all">
+              n
+            </li>
           </ul>
         </a>
         <div>
-
-          <ul class=" gap-4 text-xl font-semibold hidden md:flex">
+          <ul class="gap-4 text-xl font-semibold hidden md:flex">
             <li><a href="#">Home</a></li>
             <li><a href="#projects">Projects</a></li>
             <li><a href="#contact">Contact</a></li>
           </ul>
           <div class="block md:hidden navbar-burger">
-            <img class="h-8" src="/img/svg/hamburger.svg" alt="">
+            <img class="h-8" src="/img/svg/hamburger.svg" alt="" />
           </div>
         </div>
       </div>
     </nav>
-    <div style="z-index: 100" class="navbar-menu relative hidden ">
+    <div style="z-index: 100" class="navbar-menu relative hidden">
       <div class="navbar-backdrop fixed inset-0 bg-gray-800 opacity-25"></div>
-      <nav class="fixed top-0 left-0 bottom-0 flex flex-col w-5/6 max-w-sm py-6 px-6 bg-white border-r overflow-y-auto">
+      <nav
+        class="fixed top-0 left-0 bottom-0 flex flex-col w-5/6 max-w-sm py-6 px-6 bg-white border-r overflow-y-auto"
+      >
         <div class="flex items-center mb-8">
           <a class="mr-auto text-3xl font-bold leading-none" href="#">
-          <img class="h-12" src="/img/logo.png" alt="">
+            <img class="h-12" src="/img/logo.png" alt="" />
           </a>
           <button class="navbar-close">
-            <svg class="h-6 w-6 text-gray-400 cursor-pointer hover:text-gray-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+            <svg
+              class="h-6 w-6 text-gray-400 cursor-pointer hover:text-gray-500"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M6 18L18 6M6 6l12 12"
+              ></path>
             </svg>
           </button>
         </div>
         <div>
           <ul>
             <li class="mb-1">
-              <a class="block p-4 text-xl  font-semibold text-gray-400 hover:bg-red-50  rounded" href="#">Home</a>
+              <a
+                class="block p-4 text-xl font-semibold text-gray-400 hover:bg-red-50 rounded"
+                href="#"
+                >Home</a
+              >
             </li>
             <li class="mb-1">
-              <a class="block p-4 text-xl  font-semibold text-gray-400 hover:bg-red-50  rounded" href="#projects">Projects</a>
+              <a
+                class="block p-4 text-xl font-semibold text-gray-400 hover:bg-red-50 rounded"
+                href="#projects"
+                >Projects</a
+              >
             </li>
             <li class="mb-1">
-              <a class="block p-4 text-lg  font-semibold text-gray-400 hover:bg-red-50  rounded" href="#contact">Contact</a>
+              <a
+                class="block p-4 text-xl font-semibold text-gray-400 hover:bg-red-50 rounded"
+                href="#contact"
+                >Contact</a
+              >
             </li>
-           
           </ul>
         </div>
-
       </nav>
     </div>
     <header id="hero" class="">
@@ -112,117 +144,151 @@
     <section id="projects" class="max-w-7xl mx-auto py-12 px-4">
       <h2 class="text-4xl text-center font-semibold mb-12">Projects</h2>
       <div
-        class="grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-3 gap-4 justify-around"
+        class="grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-4 gap-4 justify-around"
       >
-        <div class="projectCard w-full flex flex-col card2">
+        <div class="projectCard">
           <div class="min-h-[8rem] h-[8rem] overflow-hidden">
             <img class="" src="img/ironDev.png" alt="" />
           </div>
-          <div class="p-4 flex flex-col h-full">
-            <h3 class="text-xl font-semibold text-center">IronDev</h3>
-            <p class="text-gray-500 h-full">
+          <div class="py-2 px-4 flex flex-col">
+            <h3 class="text-2xl font-semibold">IronDev</h3>
+            <a
+              class="text-lg text-red-500 underline"
+              href="https://irondev.onrender.com"
+              >irondev.onrender.com/</a
+            >
+            <p class="text-gray-500">
               Your front-end coding hub for reading and writing about
               development—a vibrant community sharing insights and expertise.
               Join us to amplify your coding experience!
             </p>
-            <div class="flex justify-around mt-4 font-semibold">
-              <a
-                target="_blank"
-                class="github"
-                href="https://github.com/Jadentr44/irondev"
-              >
-              </a>
-              <a
-                target="_blank"
-                class="demo"
-                href="https://irondev.onrender.com/"
-              >
-              </a>
-            </div>
+            <a
+              class="border-2 mt-auto px-2 py-1 w-fit text-lg mt-2 font-semibold bg-red-500 text-white hover:bg-gray-100 hover:text-red-500 border-red-500"
+              href=""
+              >View Github</a
+            >
           </div>
         </div>
-
-        <div class="projectCard w-full flex flex-col card2">
+        <div class="projectCard">
           <div class="min-h-[8rem] h-[8rem] overflow-hidden">
             <img
-              class="object-center"
+              class=""
               src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/Npm-logo.svg/1200px-Npm-logo.svg.png"
               alt=""
             />
           </div>
-          <div class="p-4 flex flex-col h-full">
-            <h3 class="text-xl font-semibold text-center">js-random-data</h3>
-            <p class="text-gray-500 h-full">
+          <div class="py-2 px-4 flex flex-col">
+            <h3 class="text-2xl font-semibold">Js-Random-Data</h3>
+            <a
+              class="text-lg text-red-500 underline"
+              href="https://www.npmjs.com/package/js-random-data"
+              >www.npmjs.com</a
+            >
+            <p class="text-gray-500">
               A versatile npm package designed to effortlessly generate random
-              data for diverse uses. With intuitive functions and customizable
-              options, aiding developers in testing and prototyping with ease.
+              data. With intuitive functions and customizable options, aiding
+              developers in testing and prototyping.
             </p>
-            <div class="flex justify-around mt-4 font-semibold">
-              <a
-                target="_blank"
-                class="github"
-                href="https://github.com/Jadentr44/js-random-data"
-              >
-              </a>
-              <a
-                target="_blank"
-                class="demo"
-                href="https://www.npmjs.com/package/js-random-data"
-              >
-              </a>
-            </div>
+            <a
+              class="border-2 px-2 py-1 w-fit text-lg mt-2 font-semibold bg-red-500 text-white hover:bg-gray-100 hover:text-red-500 border-red-500"
+              href="https://github.com/Jadentr44/js-random-data"
+              >View Github</a
+            >
           </div>
         </div>
-        <div class="projectCard w-full flex flex-col card2">
+        <div class="projectCard">
           <div class="min-h-[8rem] h-[8rem] overflow-hidden">
             <img class="" src="img/MyAniRank.png" alt="" />
           </div>
-          <div class="p-4 flex flex-col h-full">
-            <h3 class="text-xl font-semibold text-center">MyAniRank</h3>
-            <p class="text-gray-500 h-full">
-              Whether you're a seasoned fan or new to anime, MyAniRank provides
-              an intuitive experience to discover and track your favorite series
-              and movies.
+          <div class="py-2 px-4 flex flex-col h-full">
+            <h3 class="text-2xl font-semibold">MyAniRank</h3>
+            <!-- <a
+              class="text-lg text-red-500 underline"
+              href="https://irondev.onrender.com/"
+              >irondev.onrender.com/</a
+            > -->
+            <p class="text-gray-500">
+              Your front-end coding hub for reading and writing about
+              development—a vibrant community sharing insights and expertise.
+              Join us to amplify your coding experience!
             </p>
+            <!-- <a
+              class="border-2 px-2 py-1 w-fit text-lg mt-2 font-semibold bg-red-500 text-white hover:bg-gray-100 hover:text-red-500 border-red-500"
+              href=""
+              >View Github</a
+            > -->
+          </div>
+        </div>
+        <div class="projectCard">
+          <div class="min-h-[8rem] h-[8rem] overflow-hidden">
+            <img
+              class=""
+              src="https://t3.ftcdn.net/jpg/00/92/66/20/360_F_92662026_9fiMh5jgCBIo9il3sQgMQCXdZ0W5afBa.jpg"
+              alt=""
+            />
+          </div>
+          <div class="py-2 px-4 flex flex-col h-full">
+            <h3 class="text-2xl font-semibold">Coming Soon</h3>
+            <!-- <a
+              class="text-lg text-red-500 underline"
+              href="https://irondev.onrender.com/"
+              >irondev.onrender.com/</a
+            > -->
+            <p class="text-gray-500">
+              Exciting innovations on the horizon! Stay tuned for the launch of
+              my latest web development projects, where creativity meets
+              functionality for a seamless online experience
+            </p>
+            <!-- <a
+              class="border-2 px-2 py-1 w-fit text-lg mt-2 font-semibold bg-red-500 text-white hover:bg-gray-100 hover:text-red-500 border-red-500"
+              href=""
+              >View Github</a
+            > -->
           </div>
         </div>
       </div>
     </section>
     <section
       id="contact"
-      class="lg:max-w-7xl max-w-xl mx-auto px-4 "
+      class="lg:max-w-7xl max-w-xl mx-auto px-4"
       id="contact"
     >
-    <h2 class="text-4xl text-center font-semibold mb-12">Contact</h2>
-    <div class="grid lg:grid-cols-3  gap-4 mx-auto">
-      <a target="_blank" href="https://github.com/Jadentr44">
-
-        <div class="border-2 rounded-lg bg-white shadow-lg px-4 py-2 flex  items-center ">
-          <img class="contactSvg" src="/img/svg/github.svg" alt="">
-          <h4 class="text-xl w-full  text-center font-semibold r">Jadentr44</h4>
-          
-        </div>
-      </a>
-      <a  href="mailto:jadentr.44@gmail.com">
-
-        <div class="border-2 rounded-lg bg-white shadow-lg px-4 py-2 flex h-full  items-center">
-          <img class="contactSvg" src="/img/svg/email.svg" alt="">
-          <h4 class="text-xl w-full  text-center font-semibold r">Jadentr.44@gmail.com</h4>
-          
-        </div>
-      </a>
-      <a target="_blank" href="https://www.linkedin.com/in/jaden-rodriguez-59a000242/">
-
-        <div class="border-2 rounded-lg bg-white shadow-lg px-4 py-2 flex  items-center">
-          <img class="contactSvg" src="/img/svg/linkedin.svg" alt="">
-          <h4 class="text-xl w-full  text-center font-semibold r">Jaden Rodriguez</h4>
-          
-        </div>
-      </a>
-
-
-
-    </div>
+      <h2 class="text-4xl text-center font-semibold mb-12">Contact</h2>
+      <div class="grid lg:grid-cols-3 gap-4 mx-auto">
+        <a target="_blank" href="https://github.com/Jadentr44">
+          <div
+            class="border-2 rounded-lg bg-white shadow-lg px-4 py-2 flex items-center"
+          >
+            <img class="contactSvg" src="/img/svg/github.svg" alt="" />
+            <h4 class="text-xl w-full text-center font-semibold r">
+              Jadentr44
+            </h4>
+          </div>
+        </a>
+        <a href="mailto:jadentr.44@gmail.com">
+          <div
+            class="border-2 rounded-lg bg-white shadow-lg px-4 py-2 flex h-full items-center"
+          >
+            <img class="contactSvg" src="/img/svg/email.svg" alt="" />
+            <h4 class="text-xl w-full text-center font-semibold r">
+              Jadentr.44@gmail.com
+            </h4>
+          </div>
+        </a>
+        <a
+          target="_blank"
+          href="https://www.linkedin.com/in/jaden-rodriguez-59a000242/"
+        >
+          <div
+            class="border-2 rounded-lg bg-white shadow-lg px-4 py-2 flex items-center"
+          >
+            <img class="contactSvg" src="/img/svg/linkedin.svg" alt="" />
+            <h4 class="text-xl w-full text-center font-semibold r">
+              Jaden Rodriguez
+            </h4>
+          </div>
+        </a>
+      </div>
     </section>
     <footer
       class="bg-[#EF4444] py-4 px-2 mt-12 text-white md:text-lg text-center"
