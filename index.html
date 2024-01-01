@@ -17,10 +17,10 @@
     <link rel="stylesheet" href="/styles/output.css" />
     <!-- <script src="https://cdn.tailwindcss.com"></script> -->
   </head>
-  <body>
-    <nav style="z-index: 80" class="fixed top-0 left-0 right-0 bg-[#f0f0f0]">
+  <body class="">
+    <nav style="z-index: 80" class="fixed top-0 left-0 right-0 bg-mainBg dark:bg-gray-600 dark:text-white">
       <div
-        class="max-w-7xl py-2 px-4 flex mx-auto items-center justify-between"
+        class="max-w-7xl py-2 px-4 flex mx-auto items-center justify-between "
       >
         <a class="flex items-center gap-2" href="#">
           <img class="sm:h-12 h-10" src="img/logo.png " alt="" />
@@ -32,63 +32,70 @@
             <li class="hover:translate-y-1 transition-all">n</li>
           </ul>
         </a>
-        <div>
-          <ul class="gap-4 text-xl font-semibold hidden md:flex">
+        <div class="flex items-center gap-4">
+          <ul class="gap-4 text-xl font-semibold hidden md:flex items-center">
             <li><a href="#">Home</a></li>
             <li><a href="#projects">Projects</a></li>
             <li><a href="#contact">Contact</a></li>
+
           </ul>
+          <label class="relative flex items-center cursor-pointer">
+            <input id="darkToggle" onclick="toggleDarkMode()" type="checkbox" value="" class="sr-only peer">
+            <div class="w-11 h-6 bg-gray-200  rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-red-500"></div>
+            
+          </label>
           <div class="block md:hidden navbar-burger">
             <img class="h-8" src="/img/svg/hamburger.svg" alt="" />
           </div>
         </div>
       </div>
+      <div style="z-index: 100" class="navbar-menu relative hidden">
+        <div class="navbar-backdrop fixed inset-0  opacity-25"></div>
+        <nav
+          class="fixed top-0 left-0 bottom-0 flex flex-col w-5/6 max-w-sm py-6 px-6 bg-red-500 border-r overflow-y-auto"
+        >
+          <div class="flex items-center mb-8">
+            <a class="mr-auto text-3xl font-bold leading-none" href="#">
+              <img class="h-12" src="/img/logo.png" alt="" />
+            </a>
+            <button class="navbar-close">
+              <img
+                class="h-6 w-6 text-white cursor-pointer hover:text-gray-500"
+                src="/img/svg/close.svg"
+                alt=""
+              />
+            </button>
+          </div>
+          <div>
+            <ul>
+              <li class="mb-1">
+                <a
+                  class="block p-4 text-xl font-semibold text-white hover:text-gray-200 rounded"
+                  href="#"
+                  >Home</a
+                >
+              </li>
+              <li class="mb-1">
+                <a
+                  class="block p-4 text-xl font-semibold text-white hover:text-gray-200 rounded"
+                  href="#projects"
+                  >Projects</a
+                >
+              </li>
+              <li class="mb-1">
+                <a
+                  class="block p-4 text-xl font-semibold text-white hover:text-gray-200 rounded"
+                  href="#contact"
+                  >Contact</a
+                >
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
     </nav>
-    <div style="z-index: 100" class="navbar-menu relative hidden">
-      <div class="navbar-backdrop fixed inset-0 bg-gray-800 opacity-25"></div>
-      <nav
-        class="fixed top-0 left-0 bottom-0 flex flex-col w-5/6 max-w-sm py-6 px-6 bg-red-500 border-r overflow-y-auto"
-      >
-        <div class="flex items-center mb-8">
-          <a class="mr-auto text-3xl font-bold leading-none" href="#">
-            <img class="h-12" src="/img/logo.png" alt="" />
-          </a>
-          <button class="navbar-close">
-            <img
-              class="h-6 w-6 text-white cursor-pointer hover:text-gray-500"
-              src="/img/svg/close.svg"
-              alt=""
-            />
-          </button>
-        </div>
-        <div>
-          <ul>
-            <li class="mb-1">
-              <a
-                class="block p-4 text-xl font-semibold text-white hover:text-gray-200 rounded"
-                href="#"
-                >Home</a
-              >
-            </li>
-            <li class="mb-1">
-              <a
-                class="block p-4 text-xl font-semibold text-white hover:text-gray-200 rounded"
-                href="#projects"
-                >Projects</a
-              >
-            </li>
-            <li class="mb-1">
-              <a
-                class="block p-4 text-xl font-semibold text-white hover:text-gray-200 rounded"
-                href="#contact"
-                >Contact</a
-              >
-            </li>
-          </ul>
-        </div>
-      </nav>
-    </div>
-    <header id="hero" class="">
+
+    <section id="hero" class="">
       <div
         class="flex flex-col-reverse md:flex-row justify-center items-center max-w-6xl min-h-screen mx-auto px-4"
       >
@@ -130,13 +137,15 @@
           />
         </div>
       </div>
-    </header>
+    </section>
 
-    <section id="projects" class="max-w-7xl mx-auto py-12 px-4">
-      <h2 class="text-4xl text-center font-semibold mb-12">Projects</h2>
-      <div
-        class="grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-4 gap-4 justify-around"
-      >
+    <section id="projects" class=" py-12 px-4">
+      <div class="max-w-7xl mx-auto">
+
+        <h2 class="text-4xl text-center font-semibold mb-12">Projects</h2>
+        <div
+        class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 justify-around"
+        >
         <div class="projectCard">
           <div class="min-h-[8rem] h-[8rem] overflow-hidden">
             <img class="" src="img/ironDev.png" alt="" />
@@ -145,25 +154,25 @@
             <div class="flex items-center h-fit justify-between">
               <h3 class="text-2xl font-semibold">Iron Dev</h3>
               <a class="github" target="_blank"   href="https://github.com/Jadentr44/irondev"
-                >
-                  <img
-                    class="w-6 h-6"
-                    src="/img/svg/outlineGithub.svg"
-                    alt=""
-                  />
-               
-              </a>
-            </div>
-            <a
-              class="text-lg text-red-500 underline"
-              href="https://irondev.onrender.com"
-              >irondev.onrender.com/</a
-            >
-            <p class="text-gray-500">
-              Your front-end coding hub for reading and writing about
-              development—a vibrant community sharing insights and expertise.
-              Join us to amplify your coding experience!
-            </p>
+              >
+              <img
+              class="w-6 h-6"
+              src="/img/svg/outlineGithub.svg"
+              alt=""
+              />
+              
+            </a>
+          </div>
+          <a
+          class="text-lg text-red-500 underline"
+          href="https://irondev.onrender.com"
+          >irondev.onrender.com/</a
+          >
+          <p class="text-gray-500">
+            Your front-end coding hub for reading and writing about
+            development—a vibrant community sharing insights and expertise.
+            Join us to amplify your coding experience!
+          </p>
             <a class="text-lg  rounded-lg  bg-red-500 hover:bg-red-600 text-white mt-2 w-fit font-semibold px-2 py-1" href="">
               Learn More
             </a>
@@ -173,38 +182,38 @@
         <div class="projectCard">
           <div class="min-h-[8rem] h-[8rem] overflow-hidden">
             <img
-              class=""
-              src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/Npm-logo.svg/1200px-Npm-logo.svg.png"
-              alt=""
+            class=""
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/Npm-logo.svg/1200px-Npm-logo.svg.png"
+            alt=""
             />
           </div>
           <div class="py-2 px-4 flex flex-col">
             <div class="flex items-center h-fit justify-between">
               <h3 class="text-2xl font-semibold">Js-Random-Data</h3>
               <a class="github" target="_blank"   href="https://github.com/Jadentr44/js-random-data"
-                >
-                  <img
-                    class="w-6 h-6"
-                    src="/img/svg/outlineGithub.svg"
-                    alt=""
-                  />
-               
-              </a>
-            </div>
-            <a
-              class="text-lg text-red-500 underline"
-              href="https://www.npmjs.com/package/js-random-data"
-              >www.npmjs.com</a
-            >
-            <p class="text-gray-500 text-limit">
-              A versatile npm package designed to effortlessly generate random
-              data. With intuitive functions and customizable options, aiding
-              developers in testing and prototyping.
-            </p>
-            <a class="text-lg  rounded-lg  bg-red-500 hover:bg-red-600 text-white mt-2 w-fit font-semibold px-2 py-1" href="">
-              Learn More
+              >
+              <img
+              class="w-6 h-6"
+              src="/img/svg/outlineGithub.svg"
+              alt=""
+              />
+              
             </a>
           </div>
+          <a
+          class="text-lg text-red-500 underline"
+          href="https://www.npmjs.com/package/js-random-data"
+          >www.npmjs.com</a
+          >
+          <p class="text-gray-500 text-limit">
+            A versatile npm package designed to effortlessly generate random
+            data. With intuitive functions and customizable options, aiding
+            developers in testing and prototyping.
+          </p>
+          <a class="text-lg  rounded-lg  bg-red-500 hover:bg-red-600 text-white mt-2 w-fit font-semibold px-2 py-1" href="">
+            Learn More
+          </a>
+        </div>
         </div>
         <div class="projectCard">
           <div class="min-h-[8rem] h-[8rem] overflow-hidden">
@@ -216,92 +225,96 @@
               class="text-lg text-red-500 underline"
               href="https://irondev.onrender.com/"
               >irondev.onrender.com/</a
-            > -->
-            <p class="text-gray-500">
-              Your front-end coding hub for reading and writing about
-              development—a vibrant community sharing insights and expertise.
-              Join us to amplify your coding experience!
-            </p>
-            <!-- <a
-              class="border-2 px-2 py-1 w-fit text-lg mt-2 font-semibold bg-red-500 text-white hover:bg-gray-100 hover:text-red-500 border-red-500"
-              href=""
-              >View Github</a
-            > -->
-          </div>
-        </div>
-        <div class="projectCard">
-          <div class="min-h-[8rem] h-[8rem] overflow-hidden">
-            <img
-              class=""
-              src="https://t3.ftcdn.net/jpg/00/92/66/20/360_F_92662026_9fiMh5jgCBIo9il3sQgMQCXdZ0W5afBa.jpg"
-              alt=""
-            />
-          </div>
-          <div class="py-2 px-4 flex flex-col h-full">
-            <h3 class="text-2xl font-semibold">Coming Soon</h3>
-            <!-- <a
-              class="text-lg text-red-500 underline"
-              href="https://irondev.onrender.com/"
-              >irondev.onrender.com/</a
-            > -->
-            <p class="text-gray-500">
-              Exciting innovations on the horizon! Stay tuned for the launch of
-              my latest web development projects, where creativity meets
-              functionality for a seamless online experience
-            </p>
-            <!-- <a
-              class="border-2 px-2 py-1 w-fit text-lg mt-2 font-semibold bg-red-500 text-white hover:bg-gray-100 hover:text-red-500 border-red-500"
-              href=""
-              >View Github</a
-            > -->
-          </div>
-        </div>
-      </div>
-    </section>
+              > -->
+              <p class="text-gray-500">
+                Your front-end coding hub for reading and writing about
+                development—a vibrant community sharing insights and expertise.
+                Join us to amplify your coding experience!
+              </p>
+              <!-- <a
+                class="border-2 px-2 py-1 w-fit text-lg mt-2 font-semibold bg-red-500 text-white hover:bg-gray-100 hover:text-red-500 border-red-500"
+                href=""
+                >View Github</a
+                > -->
+              </div>
+            </div>
+            <div class="projectCard">
+              <div class="min-h-[8rem] h-[8rem] overflow-hidden">
+                <img
+                class=""
+                src="https://t3.ftcdn.net/jpg/00/92/66/20/360_F_92662026_9fiMh5jgCBIo9il3sQgMQCXdZ0W5afBa.jpg"
+                alt=""
+                />
+              </div>
+              <div class="py-2 px-4 flex flex-col h-full">
+                <h3 class="text-2xl font-semibold">Coming Soon</h3>
+                <!-- <a
+                  class="text-lg text-red-500 underline"
+                  href="https://irondev.onrender.com/"
+                  >irondev.onrender.com/</a
+                  > -->
+                  <p class="text-gray-500">
+                    Exciting innovations on the horizon! Stay tuned for the launch of
+                    my latest web development projects, where creativity meets
+                    functionality for a seamless online experience
+                  </p>
+                  <!-- <a
+                    class="border-2 px-2 py-1 w-fit text-lg mt-2 font-semibold bg-red-500 text-white hover:bg-gray-100 hover:text-red-500 border-red-500"
+                    href=""
+                    >View Github</a
+                    > -->
+                  </div>
+                </div>
+              </div>
+            </div>
+            </section>
     <section
       id="contact"
-      class="lg:max-w-7xl max-w-xl mx-auto px-4"
+      class="  px-4 pb-12"
       id="contact"
     >
+    <div class="lg:max-w-7xl max-w-xl mx-auto">
+
       <h2 class="text-4xl text-center font-semibold mb-12">Contact</h2>
       <div class="grid lg:grid-cols-3 gap-4 mx-auto">
         <a target="_blank" href="https://github.com/Jadentr44">
           <div
-            class="border-2 rounded-lg bg-white shadow-lg px-4 py-2 flex items-center"
+          class="border-2 rounded-lg bg-white shadow-lg px-4 py-2 flex items-center"
           >
-            <img class="contactSvg" src="/img/svg/github.svg" alt="" />
-            <h4 class="text-xl w-full text-center font-semibold r">
-              Jadentr44
-            </h4>
-          </div>
-        </a>
-        <a href="mailto:jadentr.44@gmail.com">
-          <div
-            class="border-2 rounded-lg bg-white shadow-lg px-4 py-2 flex h-full items-center"
-          >
-            <img class="contactSvg" src="/img/svg/email.svg" alt="" />
-            <h4 class="text-xl w-full text-center font-semibold r">
-              Jadentr.44@gmail.com
-            </h4>
-          </div>
-        </a>
-        <a
-          target="_blank"
-          href="https://www.linkedin.com/in/jaden-rodriguez-59a000242/"
+          <img class="contactSvg" src="/img/svg/github.svg" alt="" />
+          <h4 class="text-xl w-full text-center font-semibold r">
+            Jadentr44
+          </h4>
+        </div>
+      </a>
+      <a href="mailto:jadentr.44@gmail.com">
+        <div
+        class="border-2 rounded-lg bg-white shadow-lg px-4 py-2 flex h-full items-center"
         >
-          <div
-            class="border-2 rounded-lg bg-white shadow-lg px-4 py-2 flex items-center"
-          >
-            <img class="contactSvg" src="/img/svg/linkedin.svg" alt="" />
-            <h4 class="text-xl w-full text-center font-semibold r">
-              Jaden Rodriguez
-            </h4>
-          </div>
-        </a>
+        <img class="contactSvg" src="/img/svg/email.svg" alt="" />
+        <h4 class="text-xl w-full text-center font-semibold r">
+          Jadentr.44@gmail.com
+        </h4>
       </div>
-    </section>
+    </a>
+    <a
+    target="_blank"
+    href="https://www.linkedin.com/in/jaden-rodriguez-59a000242/"
+    >
+    <div
+    class="border-2 rounded-lg bg-white shadow-lg px-4 py-2 flex items-center"
+    >
+    <img class="contactSvg" src="/img/svg/linkedin.svg" alt="" />
+    <h4 class="text-xl w-full text-center font-semibold r">
+      Jaden Rodriguez
+    </h4>
+  </div>
+</a>
+</div>
+</div>
+</section>
     <footer
-      class="bg-[#EF4444] py-4 px-2 mt-12 text-white md:text-lg text-center"
+      class="bg-[#EF4444] py-4 px-2  text-white md:text-lg text-center"
     >
       © 2023 Jaden Rodriguez Dev. All rights reserved.
     </footer>
