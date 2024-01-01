@@ -14,8 +14,8 @@
       rel="stylesheet"
     />
 
-    <link rel="stylesheet" href="/style.css" />
-    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="/styles/output.css" />
+    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
   </head>
   <body>
     <nav style="z-index: 80" class="fixed top-0 left-0 right-0 bg-[#f0f0f0]">
@@ -25,21 +25,11 @@
         <a class="flex items-center gap-2" href="#">
           <img class="sm:h-12 h-10" src="img/logo.png " alt="" />
           <ul class="flex sm:text-4xl name text-3xl font-bold">
-            <li class=" hover:translate-y-1 transition-all">
-              J
-            </li>
-            <li class=" hover:translate-y-1 transition-all">
-              a
-            </li>
-            <li class=" hover:translate-y-1 transition-all">
-              d
-            </li>
-            <li class=" hover:translate-y-1 transition-all">
-              e
-            </li>
-            <li class=" hover:translate-y-1 transition-all">
-              n
-            </li>
+            <li class="hover:translate-y-1 transition-all">J</li>
+            <li class="hover:translate-y-1 transition-all">a</li>
+            <li class="hover:translate-y-1 transition-all">d</li>
+            <li class="hover:translate-y-1 transition-all">e</li>
+            <li class="hover:translate-y-1 transition-all">n</li>
           </ul>
         </a>
         <div>
@@ -57,48 +47,39 @@
     <div style="z-index: 100" class="navbar-menu relative hidden">
       <div class="navbar-backdrop fixed inset-0 bg-gray-800 opacity-25"></div>
       <nav
-        class="fixed top-0 left-0 bottom-0 flex flex-col w-5/6 max-w-sm py-6 px-6 bg-white border-r overflow-y-auto"
+        class="fixed top-0 left-0 bottom-0 flex flex-col w-5/6 max-w-sm py-6 px-6 bg-red-500 border-r overflow-y-auto"
       >
         <div class="flex items-center mb-8">
           <a class="mr-auto text-3xl font-bold leading-none" href="#">
             <img class="h-12" src="/img/logo.png" alt="" />
           </a>
           <button class="navbar-close">
-            <svg
-              class="h-6 w-6 text-gray-400 cursor-pointer hover:text-gray-500"
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M6 18L18 6M6 6l12 12"
-              ></path>
-            </svg>
+            <img
+              class="h-6 w-6 text-white cursor-pointer hover:text-gray-500"
+              src="/img/svg/close.svg"
+              alt=""
+            />
           </button>
         </div>
         <div>
           <ul>
             <li class="mb-1">
               <a
-                class="block p-4 text-xl font-semibold text-gray-400 hover:bg-red-50 rounded"
+                class="block p-4 text-xl font-semibold text-white hover:text-gray-200 rounded"
                 href="#"
                 >Home</a
               >
             </li>
             <li class="mb-1">
               <a
-                class="block p-4 text-xl font-semibold text-gray-400 hover:bg-red-50 rounded"
+                class="block p-4 text-xl font-semibold text-white hover:text-gray-200 rounded"
                 href="#projects"
                 >Projects</a
               >
             </li>
             <li class="mb-1">
               <a
-                class="block p-4 text-xl font-semibold text-gray-400 hover:bg-red-50 rounded"
+                class="block p-4 text-xl font-semibold text-white hover:text-gray-200 rounded"
                 href="#contact"
                 >Contact</a
               >
@@ -126,9 +107,19 @@
           </p>
           <div class="flex gap-2 font-semibold">
             <a href="#projects">
-              <button class="btn2 px-4 py-1">Learn More</button>
+              <button
+                class="rounded-lg border-2 px-2 py-1 border-red-500 text-white bg-red-500 hover:bg-red-600"
+              >
+                Learn More
+              </button>
             </a>
-            <button class="btn px-4 py-1">Contact</button>
+            <a href="#contact">
+              <button
+                class="rounded-lg border-2 px-2 py-1 border-red-500 text-white bg-red-500 hover:bg-red-600"
+              >
+                Contact Me
+              </button>
+            </a>
           </div>
         </div>
         <div class="md:w-1/3">
@@ -151,7 +142,18 @@
             <img class="" src="img/ironDev.png" alt="" />
           </div>
           <div class="py-2 px-4 flex flex-col">
-            <h3 class="text-2xl font-semibold">IronDev</h3>
+            <div class="flex items-center h-fit justify-between">
+              <h3 class="text-2xl font-semibold">Iron Dev</h3>
+              <a class="github" target="_blank"   href="https://github.com/Jadentr44/irondev"
+                >
+                  <img
+                    class="w-6 h-6"
+                    src="/img/svg/outlineGithub.svg"
+                    alt=""
+                  />
+               
+              </a>
+            </div>
             <a
               class="text-lg text-red-500 underline"
               href="https://irondev.onrender.com"
@@ -162,11 +164,10 @@
               development—a vibrant community sharing insights and expertise.
               Join us to amplify your coding experience!
             </p>
-            <a
-              class="border-2 mt-auto px-2 py-1 w-fit text-lg mt-2 font-semibold bg-red-500 text-white hover:bg-gray-100 hover:text-red-500 border-red-500"
-              href=""
-              >View Github</a
-            >
+            <a class="text-lg  rounded-lg  bg-red-500 hover:bg-red-600 text-white mt-2 w-fit font-semibold px-2 py-1" href="">
+              Learn More
+            </a>
+            
           </div>
         </div>
         <div class="projectCard">
@@ -178,22 +179,31 @@
             />
           </div>
           <div class="py-2 px-4 flex flex-col">
-            <h3 class="text-2xl font-semibold">Js-Random-Data</h3>
+            <div class="flex items-center h-fit justify-between">
+              <h3 class="text-2xl font-semibold">Js-Random-Data</h3>
+              <a class="github" target="_blank"   href="https://github.com/Jadentr44/js-random-data"
+                >
+                  <img
+                    class="w-6 h-6"
+                    src="/img/svg/outlineGithub.svg"
+                    alt=""
+                  />
+               
+              </a>
+            </div>
             <a
               class="text-lg text-red-500 underline"
               href="https://www.npmjs.com/package/js-random-data"
               >www.npmjs.com</a
             >
-            <p class="text-gray-500">
+            <p class="text-gray-500 text-limit">
               A versatile npm package designed to effortlessly generate random
               data. With intuitive functions and customizable options, aiding
               developers in testing and prototyping.
             </p>
-            <a
-              class="border-2 px-2 py-1 w-fit text-lg mt-2 font-semibold bg-red-500 text-white hover:bg-gray-100 hover:text-red-500 border-red-500"
-              href="https://github.com/Jadentr44/js-random-data"
-              >View Github</a
-            >
+            <a class="text-lg  rounded-lg  bg-red-500 hover:bg-red-600 text-white mt-2 w-fit font-semibold px-2 py-1" href="">
+              Learn More
+            </a>
           </div>
         </div>
         <div class="projectCard">

@@ -1,0 +1,132 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+/* Hide scrollbar for Chrome, Safari and Opera */
+body::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+body {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+  background-color: #f0f0f0;
+
+}
+html{
+  scroll-behavior: smooth;
+}
+nav li:hover{
+  color: #EF4444;
+}
+/* button {
+  border-radius: 0.5rem;
+  border: solid black 1px;
+  font-weight: 500;
+
+} */
+.btn:hover,.btn2{
+  background-color: #EF4444;
+
+  color: white;
+  transition-delay: 0ms;
+
+}
+.btn, .btn2:hover{
+  border-color: #EF4444;
+  color: #EF4444;
+  background-color: white;
+}
+
+.projectCard {
+  transition: all .2s;
+  border-radius:  0 0 .5rem .5rem;
+  background-color: white;
+  overflow: hidden;
+  box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+}
+
+
+.cardContent {
+  visibility: hidden;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(0, 0, 0, 0.7);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.projectCard {
+  max-width: 30rem;
+  margin-inline: auto;
+}
+
+.hide {
+  opacity: 0;
+  transition: opacity  1s, transform 1s;
+  transform: translateX(-70%);
+
+}
+input, textarea{
+  width: 100%;
+  padding: .5rem;
+  border-radius: .5rem;
+  border: 1px solid black;
+  font-size: large;
+  margin-bottom: 1rem;
+}
+/* .highlight{
+  background-image: linear-gradient(#EF4444,#EF4444) ;
+  background-size: 100% 3px;
+  animation-delay: .5s;
+
+ background-position: bottom left;
+ background-repeat: no-repeat;
+} */
+.text-limit{
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 5; /* number of lines to show */
+          line-clamp: 5; 
+  -webkit-box-orient: vertical;
+}
+.contactSvg{
+  width: 25%;
+  min-width: 20%;
+}
+.github{
+  border-radius: 0.5rem;
+  padding: .25rem;
+  border: solid 2px black;
+}
+@keyframes widthFull {
+  0% {
+     background-size: 0% 3px;
+
+  }
+  100% {
+    background-size: 100% 3px;
+
+  }
+}
+@media (min-width: 1024px) { 
+
+  .card1 {transition-delay:  .4s;z-index: 5;}
+  .card2 {transition-delay: .5s; z-index: 4;}
+  .card3 {transition-delay: .6s; z-index: 3;}
+  .card4 {transition-delay: .7s; z-index: 2;}
+}
+.show {
+  opacity: 1;
+  transform: translateX(0);
+}
+@media (hover: hover) {
+ .name li{
+  /* transition: all 150ms; */
+ }
+ .name li:hover{
+  transform: scale(1.25);
+	transform: translateY(0.25rem);
+ }
+}
+
